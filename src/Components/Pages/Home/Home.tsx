@@ -95,7 +95,7 @@ export default function KenCarltonLanding() {
       </section>
 
       <section className="py-5 px-6 md:px-24 bg-gray-50 relative">
-        <h2 className="text-4xl font-light text-center mb-2" data-aos="fade-up">Our Signature</h2>
+        <h2 className="text-5xl font-light text-center mb-2 mt-4" data-aos="fade-up">Our Signature</h2>
         <div className="flex justify-center relative" data-aos="fade-up">
           <button
             onClick={() => scroll("left")}
