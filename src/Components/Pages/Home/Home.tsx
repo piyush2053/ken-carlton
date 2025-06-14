@@ -27,6 +27,12 @@ export default function KenCarltonLanding() {
       });
     }
   };
+  const products = [
+    { img: P1, label: "Classic Black Tee", alt: "Ken Carlton Classic Black T-Shirt" },
+    { img: P3, label: "White Minimal Tee", alt: "Ken Carlton White Minimalist T-Shirt" },
+    { img: P4, label: "Linen Blues", alt: "Ken Carlton Urban Street T-Shirt" },
+    { img: P5, label: "Red Bull Edition", alt: "Ken Carlton Signature Logo T-Shirt" },
+  ];
 
   useEffect(() => {
     AOS.init({ duration: 800, once: true });
@@ -35,29 +41,17 @@ export default function KenCarltonLanding() {
   return (
     <div className="bg-white text-black font-sans">
       <Helmet>
-        <title>Ken Carlton - Luxury Apparel</title>
-        <meta
-          name="description"
-          content="Ken Carlton redefines elegance with premium apparel and timeless watches. Discover luxury designed for modern sophistication."
-        />
-        <meta
-          name="keywords"
-          content="Ken Carlton, luxury clothing, premium watches, fashion brand, designer apparel"
-        />
+        <title>Ken Carlton - Luxury Apparel & Watches</title>
+        <meta name="description" content="Ken Carlton redefines elegance with premium apparel and timeless watches. Discover luxury designed for modern sophistication." />
+        <meta name="keywords" content="Ken Carlton, luxury clothing, premium watches, fashion brand, designer apparel, Amazon, Myntra, Flipkart, Ajio" />
         <meta name="author" content="Ken Carlton" />
         <meta property="og:title" content="Ken Carlton - Premium Apparel & Watches" />
-        <meta
-          property="og:description"
-          content="Explore Ken Carlton's elite collection of clothing and watches crafted with precision and passion."
-        />
+        <meta property="og:description" content="Explore Ken Carlton's elite collection of clothing and watches crafted with precision and passion. Available on Amazon, Myntra, Flipkart, and Ajio." />
         <meta property="og:image" content="URL_to_your_brand_banner_or_logo" />
         <meta property="og:url" content="https://www.kencarlton.in" />
         <meta property="og:type" content="website" />
         <meta name="twitter:title" content="Ken Carlton - Timeless Fashion & Style" />
-        <meta
-          name="twitter:description"
-          content="Ken Carlton offers handcrafted luxury clothing and watches for the modern icon."
-        />
+        <meta name="twitter:description" content="Ken Carlton offers handcrafted luxury clothing and watches for the modern icon. Available on Amazon, Myntra, Flipkart, and Ajio." />
         <meta name="twitter:image" content="URL_to_your_brand_banner_or_logo" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="canonical" href="https://www.kencarlton.in" />
@@ -96,6 +90,9 @@ export default function KenCarltonLanding() {
 
       <section className="py-5 px-6 md:px-24 bg-gray-50 relative">
         <h2 className="text-5xl font-light text-center mb-2 mt-4" data-aos="fade-up">Our Signature</h2>
+        <p className="text-gray-600 text-center mt-4 mb-3" data-aos="fade-in">
+          Crafted with finest fabrics and precision tailoring for timeless appeal.
+        </p>
         <div className="flex justify-center relative" data-aos="fade-up">
           <button
             onClick={() => scroll("left")}
@@ -109,7 +106,7 @@ export default function KenCarltonLanding() {
               ref={carouselRef}
               className="flex gap-4 overflow-hidden scroll-smooth py-2 px-1 scrollbar-hide"
             >
-              {[P1, P3, P4, P5].map((src, index) => (
+              {products.map(({ img, label, alt }, index) => (
                 <div
                   key={index}
                   className="min-w-[300px] flex-shrink-0 transition-transform duration-200 transform hover:scale-105"
@@ -117,10 +114,11 @@ export default function KenCarltonLanding() {
                   data-aos-delay={index * 100}
                 >
                   <img
-                    src={src}
-                    alt={`Tshirt ${index + 1}`}
+                    src={img}
+                    alt={alt}
                     className="rounded-xl w-full h-[400px] object-cover"
                   />
+                  <p className="text-center text-sm text-gray-600 mt-2">{label}</p>
                 </div>
               ))}
             </div>
@@ -134,10 +132,7 @@ export default function KenCarltonLanding() {
           </button>
         </div>
 
-        <h3 className="text-2xl mt-6 font-medium text-center" data-aos="fade-in">Designer Apparel</h3>
-        <p className="mt-2 text-gray-600 text-center" data-aos="fade-in">
-          Crafted with finest fabrics and precision tailoring for timeless appeal.
-        </p>
+       
       </section>
 
       <section className="bg-white py-16 px-6 md:px-24">
