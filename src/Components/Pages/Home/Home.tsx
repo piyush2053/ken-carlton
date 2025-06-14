@@ -61,15 +61,35 @@ export default function KenCarltonLanding() {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Ken Carlton",
-            "url": "https://www.kencarlton.in",
-            "logo": "URL_to_logo_image",
-            "description": "Ken Carlton is a luxury fashion brand offering premium apparel and watches.",
-            "sameAs": [
-              "https://www.instagram.com/kencarlton",
-              "https://www.facebook.com/kencarltonofficial"
-            ]
+            "@type": "Product",
+            "name": "Ken Carlton Apparel",
+            "brand": "Ken Carlton",
+            "offers": {
+              "@type": "AggregateOffer",
+              "availability": "https://schema.org/InStock",
+              "seller": [
+                {
+                  "@type": "Organization",
+                  "name": "Amazon India",
+                  "url": "https://www.amazon.in/s?k=ken+carlton"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Myntra",
+                  "url": "https://www.myntra.com/ken-carlton"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Ajio",
+                  "url": "https://www.ajio.com/ken-carlton"
+                },
+                {
+                  "@type": "Organization",
+                  "name": "Flipkart",
+                  "url": "https://www.flipkart.com/search?q=ken+carlton"
+                }
+              ]
+            }
           })}
         </script>
       </Helmet>
@@ -109,18 +129,21 @@ export default function KenCarltonLanding() {
               {products.map(({ img, label, alt }, index) => (
                 <div
                   key={index}
-                  className="min-w-[300px] flex-shrink-0 transition-transform duration-200 transform hover:scale-105"
+                  className="min-w-[280px] flex-shrink-0 transition-transform duration-200 transform hover:scale-105"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <img
-                    src={img}
-                    alt={alt}
-                    className="rounded-xl w-full h-[400px] object-cover"
-                  />
+                  <div className="relative bg-white rounded-xl">
+                    <img
+                      src={img}
+                      alt={alt}
+                      className="rounded-xl w-full h-[250px] sm:h-[300px] md:h-[400px] object-contain"
+                    />
+                  </div>
                   <p className="text-center text-sm text-gray-600 mt-2">{label}</p>
                 </div>
               ))}
+
             </div>
           </div>
 
@@ -132,7 +155,7 @@ export default function KenCarltonLanding() {
           </button>
         </div>
 
-       
+
       </section>
 
       <section className="bg-white py-16 px-6 md:px-24">
