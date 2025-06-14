@@ -129,20 +129,21 @@ export default function KenCarltonLanding() {
               {products.map(({ img, label, alt }, index) => (
                 <div
                   key={index}
-                  className="min-w-[280px] flex-shrink-0 transition-transform duration-200 transform hover:scale-105"
+                  className="min-w-[280px] sm:min-w-[300px] flex-shrink-0 transition-transform duration-200 transform hover:scale-105"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="relative bg-white rounded-xl">
+                  <div className="w-full h-[350px] sm:h-[400px] flex items-center justify-center bg-white rounded-xl overflow-hidden">
                     <img
                       src={img}
                       alt={alt}
-                      className="rounded-xl w-full h-[250px] sm:h-[300px] md:h-[400px] object-contain"
+                      className="h-full object-contain"
                     />
                   </div>
                   <p className="text-center text-sm text-gray-600 mt-2">{label}</p>
                 </div>
               ))}
+
 
             </div>
           </div>
@@ -173,7 +174,7 @@ export default function KenCarltonLanding() {
         </p>
       </section>
 
-      <section className="bg-black text-white py-20 px-6 text-center" data-aos="fade-up">
+      <section className="bg-black text-white pt-20 pb-10 px-6 text-center" data-aos="fade-up">
         <h2 className="text-3xl mb-6">Become Part of the Legacy</h2>
         <p className="text-lg mb-8">Join the movement of timeless style and modern sophistication.</p>
         <a href="mailto:kencarltonindia@gmail.com?subject=Join%20Ken%20Carlton&body=Hi%20Ken%20Carlton%2C%20I%20would%20like%20to%20join%20the%20movement.">
@@ -183,7 +184,7 @@ export default function KenCarltonLanding() {
         </a>
       </section>
 
-      <footer className="bg-white py-8 text-center text-sm text-gray-500">
+      <footer className="bg-black pb-8 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Ken Carlton. All rights reserved.
       </footer>
     </div>
