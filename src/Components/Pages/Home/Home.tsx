@@ -136,7 +136,7 @@ export default function KenCarltonLanding() {
       </section>
 
       <section className="bg-white py-16 px-6 md:px-24">
-        <h2 className="text-3xl md:text-4xl font-light text-center mb-10" data-aos="zoom-in">We Sell On</h2>
+        <h2 className="text-3xl md:text-4xl font-light text-center mb-10" data-aos="fade-up">We Sell On</h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center" data-aos="fade-up">
           <img src={AMAZON} alt="Amazon" className="h-10 md:h-12" />
@@ -145,7 +145,7 @@ export default function KenCarltonLanding() {
           <img src={FLIPKART} alt="Flipkart" className="h-8 md:h-10" />
         </div>
 
-        <p className="text-center text-gray-600 mt-6 text-sm md:text-base" data-aos="fade-in">
+        <p className="text-center text-gray-600 mt-6 text-sm md:text-base" data-aos="fade-up">
           Explore our exclusive collections on India’s top fashion and lifestyle marketplaces.
         </p>
       </section>
