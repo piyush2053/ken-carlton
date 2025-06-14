@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /login/
 Allow: /
 
-Sitemap: https://www.versablendsoftwares.com/sitemap.xml
+Sitemap: https://www.kencarlton.in/sitemap.xml
