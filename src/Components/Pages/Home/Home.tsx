@@ -13,10 +13,11 @@ import AMAZON from '../../../Assets/Logo/Companies/Amazon_logo.png';
 import MYNTRAA from '../../../Assets/Logo/Companies/Myntra-Logo.png';
 import AJIO from '../../../Assets/Logo/Companies/Ajio-Logo.png';
 import FLIPKART from '../../../Assets/Logo/Companies/flipkart-logo.png';
+import { useNavigate } from "react-router-dom";
 
 export default function KenCarltonLanding() {
   const carouselRef = useRef<HTMLDivElement>(null);
-
+  const navigate = useNavigate()
   const scroll = (direction: "left" | "right") => {
     const { current } = carouselRef;
     if (current) {
@@ -102,9 +103,10 @@ export default function KenCarltonLanding() {
         <div className="relative z-10 text-white px-4" data-aos="fade-down">
           <h1 className="text-5xl md:text-7xl font-extralight tracking-wide">Ken Carlton Watches</h1>
           <p className="text-xl mt-4">Elegance. Precision. You.</p>
-          <button className="mt-8 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full">
-            Coming Soon
+          <button className="mt-8 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-all duration-300 rounded-full" onClick={() => navigate('/order-watches')}>
+            Order Now
           </button>
+          <p className="mt-2 text-xs">Starting from INR 11,999/- only</p>
         </div>
       </section>
 

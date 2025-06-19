@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "../Components/Navbar/Navbar";
 import Home from "../Components/Pages/Home/Home";
+import { WatchesOrderPage } from "../Components/Watches/WatchesOrderPage";
 
 export default function Layout() {
   return (
@@ -10,6 +11,7 @@ export default function Layout() {
         <div className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/order-watches" element={<WatchesOrderPage />} />
           </Routes>
         </div>
       </div>
