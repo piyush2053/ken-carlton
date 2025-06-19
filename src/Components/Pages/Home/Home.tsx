@@ -44,7 +44,7 @@ export default function KenCarltonLanding() {
       <Helmet>
         <title>Ken Carlton - Luxury Apparel & Watches</title>
         <meta name="description" content="Ken Carlton redefines elegance with premium apparel and timeless watches. Discover luxury designed for modern sophistication." />
-        <meta name="keywords" content="Ken Carlton, luxury clothing, premium watches, fashion brand, designer apparel, Amazon, Myntra, Flipkart, Ajio" />
+        <meta name="keywords" content="Ken Carlton, luxury clothing, premium watches, fashion brand, designer apparel, Amazon, Myntra, Flipkart, Ajio, Ken , Carlton, Ken carlton india, piyush patel" />
         <meta name="author" content="Ken Carlton" />
         <meta property="og:title" content="Ken Carlton - Premium Apparel & Watches" />
         <meta property="og:description" content="Explore Ken Carlton's elite collection of clothing and watches crafted with precision and passion. Available on Amazon, Myntra, Flipkart, and Ajio." />
